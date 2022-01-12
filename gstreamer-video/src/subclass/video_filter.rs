@@ -22,7 +22,7 @@ pub trait VideoFilterImpl: VideoFilterImplExt + BaseTransformImpl {
     }
 
     fn transform_frame(
-        &self,
+        &mut self,
         element: &Self::Type,
         inframe: &VideoFrameRef<&gst::BufferRef>,
         outframe: &mut VideoFrameRef<&mut gst::BufferRef>,
